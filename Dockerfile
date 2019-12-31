@@ -7,7 +7,7 @@ ARG BASE_DIR="/opt/websrv"
 ENV REDIS_VERSION=redis-5.0.7\
  CONFIG_DIR="${BASE_DIR}/config/redis"\
  INSTALL_DIR="${BASE_DIR}/program/redis"\
- BASE_PACKAGE="gcc g++ make linux-headers tzdata coreutils musl-dev"
+ BASE_PACKAGE="gcc g++ make linux-headers tzdata coreutils musl-dev lua-turbo"
 
 ENV REDIS_URL="http://download.redis.io/releases/${REDIS_VERSION}.tar.gz"
 
@@ -32,7 +32,7 @@ RUN apk update && apk add --no-cache ${BASE_PACKAGE} &&\
  ln -s ${INSTALL_DIR}/redis-sentinel /usr/local/bin/redis-sentinel &&\
  ln -s ${INSTALL_DIR}/redis-server /usr/local/bin/redis-server &&\
  echo -e "#/bin/sh/\n${INSTALL_DIR}/redis-server ${CONFIG_DIR}/redis.conf" > ${CONFIG_DIR}/start.sh &&\
- echo -e "#/bin/sh/\nkill -s 9 \`cat ${BASE_DIR}/tmp/redis.pid\`" > ${CONFIG_DIR}/stop.sh &&\
+ echo -e "#/bin/sh/\nredis-cli shutdown > /dev/null" > ${CONFIG_DIR}/stop.sh &&\
  chmod +x ${CONFIG_DIR}/start.sh ${CONFIG_DIR}/stop.sh &&\
  apk del ${BASE_PACKAGE} &&\
  rm -rf /var/cache/apk/* &&\
