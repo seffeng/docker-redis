@@ -16,6 +16,9 @@ $ docker pull seffeng/redis
 # 运行
 $ docker run --name redis-test -d -p <port>:6379 -v <data-dir>:/opt/websrv/data/redis -v <tmp-dir>:/opt/websrv/tmp seffeng/redis
 
+# 例子：
+$ docker run --name redis-alias1 -d -p 6379:6379 -v /srv/websrv/data/redis:/opt/websrv/data/redis -v /srv/websrv/tmp:/opt/websrv/tmp seffeng/redis
+
 # 查看正在运行的容器
 $ docker ps
 
