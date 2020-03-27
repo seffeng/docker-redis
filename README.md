@@ -4,7 +4,7 @@
 
 ```
 alpine: ^3.11
-redis: 5.0.7
+redis: 5.0.8
 ```
 
 ## 常用命令：
@@ -39,4 +39,14 @@ $ docker images
 
 # 删除镜像
 $ docker rmi [IMAGE ID]
+```
+#### 备注
+
+```shell
+# 建议容器之间使用网络互通
+## 1、添加网络[已存在则跳过此步骤]
+$ docker network create network-01
+
+## 运行容器增加 --network network-01 --network-alias [name-net-alias]
+$ docker run --name redis-alias1 --network network-01 --network-alias redis-alias1 -d -p 6379:6379 -v /srv/websrv/data/redis:/opt/websrv/data/redis -v /srv/websrv/tmp:/opt/websrv/tmp seffeng/redis
 ```
