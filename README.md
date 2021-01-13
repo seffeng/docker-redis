@@ -1,10 +1,16 @@
 # Docker Alpine Redis
 
+
+## 版本说明
+
+* [6.0.10](https://github.com/seffeng/docker-redis) , [latest](https://github.com/seffeng/docker-redis)
+* [5.0.10](https://github.com/seffeng/docker-redis/tree/5.0)
+
 ## 环境
 
 ```
-alpine: ^3.11
-redis: 5.0.8
+alpine: ^3.12
+redis: 5.0.10
 ```
 
 ## 常用命令：
@@ -17,7 +23,7 @@ $ docker pull seffeng/redis
 $ docker run --name redis-test -d -p <port>:6379 -v <data-dir>:/opt/websrv/data/redis -v <tmp-dir>:/opt/websrv/tmp seffeng/redis
 
 # 例子：
-$ docker run --name redis-alias1 -d -p 6379:6379 -v /srv/websrv/data/redis:/opt/websrv/data/redis -v /srv/websrv/tmp:/opt/websrv/tmp seffeng/redis
+$ docker run --name redis-alias1 -d -p 6379:6379 -v /opt/websrv/data/redis:/opt/websrv/data/redis -v /opt/websrv/tmp:/opt/websrv/tmp seffeng/redis
 
 # 查看正在运行的容器
 $ docker ps
@@ -48,5 +54,5 @@ $ docker rmi [IMAGE ID]
 $ docker network create network-01
 
 ## 运行容器增加 --network network-01 --network-alias [name-net-alias]
-$ docker run --name redis-alias1 --network network-01 --network-alias redis-alias1 -d -p 6379:6379 -v /srv/websrv/data/redis:/opt/websrv/data/redis -v /srv/websrv/tmp:/opt/websrv/tmp seffeng/redis
+$ docker run --name redis-alias1 --network network-01 --network-alias redis-alias1 -d -p 6379:6379 -v /opt/websrv/data/redis:/opt/websrv/data/redis -v /opt/websrv/tmp:/opt/websrv/tmp seffeng/redis
 ```
