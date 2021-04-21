@@ -11,7 +11,7 @@
 
 ```
 alpine: ^3.13
-redis: 6.2.2
+redis: 6.0.12
 ```
 
 ## 常用命令：
@@ -24,7 +24,7 @@ $ docker pull seffeng/redis
 $ docker run --name redis-test -d -p <port>:6379 -v <data-dir>:/opt/websrv/data/redis -v <tmp-dir>:/opt/websrv/tmp seffeng/redis
 
 # 例子：
-$ docker run --name redis-alias1 -d -p 6379:6379 -v /opt/websrv/data/redis:/opt/websrv/data/redis -v /opt/websrv/tmp:/opt/websrv/tmp seffeng/redis
+$ docker run --name redis-alias1 -d -p 6379:6379 -v /opt/websrv/data/redis:/opt/websrv/data/redis -v /opt/websrv/tmp:/opt/websrv/tmp seffeng/redis:6.0
 
 # 查看正在运行的容器
 $ docker ps
@@ -55,5 +55,5 @@ $ docker rmi [IMAGE ID]
 $ docker network create network-01
 
 ## 运行容器增加 --network network-01 --network-alias [name-net-alias]
-$ docker run --name redis-alias1 --network network-01 --network-alias redis-alias1 -d -p 6379:6379 -v /opt/websrv/data/redis:/opt/websrv/data/redis -v /opt/websrv/tmp:/opt/websrv/tmp seffeng/redis
+$ docker run --name redis-alias1 --network network-01 --network-alias redis-alias1 -d -p 6379:6379 -v /opt/websrv/data/redis:/opt/websrv/data/redis -v /opt/websrv/tmp:/opt/websrv/tmp seffeng/redis:6.0
 ```
