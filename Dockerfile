@@ -4,7 +4,7 @@ MAINTAINER  seffeng "seffeng@sina.cn"
 
 ARG BASE_DIR="/opt/websrv"
 
-ENV REDIS_VERSION=redis-6.0.10\
+ENV REDIS_VERSION=redis-6.2.2\
  CONFIG_DIR="${BASE_DIR}/config/redis"\
  INSTALL_DIR="${BASE_DIR}/program/redis"\
  BASE_PACKAGE="gcc g++ make linux-headers tzdata coreutils musl-dev lua-turbo"
