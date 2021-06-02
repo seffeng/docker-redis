@@ -3,14 +3,15 @@
 
 ## 版本说明
 
-* [6.0.10](https://github.com/seffeng/docker-redis) , [latest](https://github.com/seffeng/docker-redis)
-* [5.0.10](https://github.com/seffeng/docker-redis/tree/5.0)
+*  [6.2.4](https://github.com/seffeng/docker-redis), [latest](https://github.com/seffeng/docker-redis)
+* [6.0.14](https://github.com/seffeng/docker-redis/tree/6.0)
+* [5.0.12](https://github.com/seffeng/docker-redis/tree/5.0)
 
 ## 环境
 
 ```
-alpine: ^3.12
-redis: 5.0.10
+alpine: ^3.13
+redis: 5.0.12
 ```
 
 ## 常用命令：
