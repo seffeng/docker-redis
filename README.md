@@ -3,7 +3,7 @@
 
 ## 版本说明
 
-* [6.2.2](https://github.com/seffeng/docker-redis) , [latest](https://github.com/seffeng/docker-redis)
+* [6.2.4](https://github.com/seffeng/docker-redis) , [latest](https://github.com/seffeng/docker-redis)
 * [6.0.12](https://github.com/seffeng/docker-redis/tree/6.0)
 * [5.0.10](https://github.com/seffeng/docker-redis/tree/5.0)
 
@@ -11,7 +11,7 @@
 
 ```
 alpine: ^3.13
-redis: 6.2.2
+redis: 6.2.4
 ```
 
 ## 常用命令：
