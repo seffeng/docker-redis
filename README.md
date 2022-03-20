@@ -1,18 +1,11 @@
 # Docker Alpine Redis
 
 
-## 版本说明
+## 版本
 
-* [6.2.6](https://github.com/seffeng/docker-redis), [latest](https://github.com/seffeng/docker-redis)
+* [6.2.6 , latest](https://github.com/seffeng/docker-redis/tree/6.2)
 * [6.0.16](https://github.com/seffeng/docker-redis/tree/6.0)
 * [5.0.14](https://github.com/seffeng/docker-redis/tree/5.0)
-
-## 环境
-
-```
-alpine: ^3.15
-redis: 6.0.16
-```
 
 ## 常用命令：
 
