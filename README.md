@@ -2,7 +2,8 @@
 
 ## 版本
 
-* [6.2.6 , latest](https://github.com/seffeng/docker-redis/tree/6.2)
+* [7.0.0](https://github.com/seffeng/docker-redis/tree/7.0)
+* [6.2.7 , latest](https://github.com/seffeng/docker-redis/tree/6.2)
 * [6.0.16](https://github.com/seffeng/docker-redis/tree/6.0)
 * [5.0.14](https://github.com/seffeng/docker-redis/tree/5.0)
 
