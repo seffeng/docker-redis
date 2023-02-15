@@ -2,10 +2,10 @@
 
 ## 版本
 
-* [7.0.2](https://github.com/seffeng/docker-redis/tree/7.0)
-* [6.2.7 , latest](https://github.com/seffeng/docker-redis/tree/6.2)
-* [6.0.16](https://github.com/seffeng/docker-redis/tree/6.0)
-* [5.0.14](https://github.com/seffeng/docker-redis/tree/5.0)
+* [7.0 , 7.0.8 , latest](https://github.com/seffeng/docker-redis/tree/7.0)
+* [6.2 , 6.2.10](https://github.com/seffeng/docker-redis/tree/6.2)
+* [6.0 , 6.0.17](https://github.com/seffeng/docker-redis/tree/6.0)
+* [5.0 , 5.0.14](https://github.com/seffeng/docker-redis/tree/5.0)
 
 ## 常用命令：
 
