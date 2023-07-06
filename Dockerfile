@@ -4,7 +4,7 @@ LABEL author="zxf <seffeng@live.com>"
 
 ARG BASE_DIR="/opt/websrv"
 
-ENV REDIS_VERSION=redis-7.0.8\
+ENV REDIS_VERSION=redis-7.0.11\
  CONFIG_DIR="${BASE_DIR}/config/redis"\
  INSTALL_DIR="${BASE_DIR}/program/redis"\
  BASE_PACKAGE="gcc g++ make linux-headers tzdata coreutils musl-dev lua-turbo"
@@ -31,8 +31,8 @@ RUN apk update && apk add --no-cache ${BASE_PACKAGE} &&\
  ln -s ${INSTALL_DIR}/redis-cli /usr/local/bin/redis-cli &&\
  ln -s ${INSTALL_DIR}/redis-sentinel /usr/local/bin/redis-sentinel &&\
  ln -s ${INSTALL_DIR}/redis-server /usr/local/bin/redis-server &&\
- echo -e "#!/bin/sh/\n${INSTALL_DIR}/redis-server ${CONFIG_DIR}/redis.conf" > ${CONFIG_DIR}/start.sh &&\
- echo -e "#!/bin/sh/\nredis-cli shutdown > /dev/null" > ${CONFIG_DIR}/stop.sh &&\
+ echo -e "#!/bin/sh\n${INSTALL_DIR}/redis-server ${CONFIG_DIR}/redis.conf" > ${CONFIG_DIR}/start.sh &&\
+ echo -e "#!/bin/sh\nredis-cli shutdown > /dev/null" > ${CONFIG_DIR}/stop.sh &&\
  chmod +x ${CONFIG_DIR}/start.sh ${CONFIG_DIR}/stop.sh &&\
  apk del ${BASE_PACKAGE} &&\
  rm -rf /var/cache/apk/* &&\
