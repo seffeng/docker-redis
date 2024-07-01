@@ -4,7 +4,7 @@ LABEL author="zxf <seffeng@live.com>"
 
 ARG BASE_DIR="/opt/websrv"
 
-ENV REDIS_VERSION=redis-7.2.4\
+ENV REDIS_VERSION=redis-7.2.5\
  CONFIG_DIR="${BASE_DIR}/config/redis"\
  INSTALL_DIR="${BASE_DIR}/program/redis"\
  BASE_PACKAGE="gcc g++ make linux-headers tzdata coreutils musl-dev lua-turbo"
