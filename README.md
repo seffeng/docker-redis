@@ -2,9 +2,12 @@
 
 ## 版本
 
-* [7.2 , 7.2.5 , latest](https://github.com/seffeng/docker-redis/tree/7.2)
+* [8.2 , 8.2.2](https://github.com/seffeng/docker-redis/tree/8.2)
+* [8.0 , 8.0.4](https://github.com/seffeng/docker-redis/tree/8.0)
+* [7.4 , 7.4.6](https://github.com/seffeng/docker-redis/tree/7.4)
+* [7.2 , 7.2.11 , latest](https://github.com/seffeng/docker-redis/tree/7.2)
 * [7.0 , 7.0.15](https://github.com/seffeng/docker-redis/tree/7.0)
-* [6.2 , 6.2.14](https://github.com/seffeng/docker-redis/tree/6.2)
+* [6.2 , 6.2.20](https://github.com/seffeng/docker-redis/tree/6.2)
 * [6.0 , 6.0.20](https://github.com/seffeng/docker-redis/tree/6.0)
 * [5.0 , 5.0.14](https://github.com/seffeng/docker-redis/tree/5.0)
 
