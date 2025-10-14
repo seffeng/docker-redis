@@ -7,14 +7,15 @@ ARG BASE_DIR="/opt/websrv"
 ENV REDIS_VERSION=redis-8.0.4\
  CONFIG_DIR="${BASE_DIR}/config/redis"\
  INSTALL_DIR="${BASE_DIR}/program/redis"\
- BASE_PACKAGE="gcc g++ make linux-headers tzdata coreutils musl-dev lua-turbo"
+ BASE_PACKAGE="gcc g++ make linux-headers tzdata coreutils musl-dev lua-turbo"\
+ EXTEND="libstdc++"
 
 ENV REDIS_URL="https://download.redis.io/releases/${REDIS_VERSION}.tar.gz"
 
 WORKDIR /tmp
 COPY    conf ./conf
 
-RUN apk update && apk add --no-cache ${BASE_PACKAGE} &&\
+RUN apk update && apk add --no-cache ${BASE_PACKAGE} ${EXTEND} &&\
  wget ${REDIS_URL} &&\
  tar -zxf ${REDIS_VERSION}.tar.gz &&\
  mkdir -p ${BASE_DIR}/logs ${BASE_DIR}/tmp ${CONFIG_DIR} ${INSTALL_DIR} ${BASE_DIR}/data/redis &&\
