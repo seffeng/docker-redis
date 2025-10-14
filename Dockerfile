@@ -1,10 +1,10 @@
-FROM seffeng/alpine:3.19
+FROM seffeng/alpine:3.22
 
 LABEL author="zxf <seffeng@live.com>"
 
 ARG BASE_DIR="/opt/websrv"
 
-ENV REDIS_VERSION=redis-7.2.11\
+ENV REDIS_VERSION=redis-7.4.6\
  CONFIG_DIR="${BASE_DIR}/config/redis"\
  INSTALL_DIR="${BASE_DIR}/program/redis"\
  BASE_PACKAGE="gcc g++ make linux-headers tzdata coreutils musl-dev lua-turbo"
